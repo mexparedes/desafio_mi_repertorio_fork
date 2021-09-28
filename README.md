@@ -28,7 +28,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 ##### La aplicación debe verse así:
 
-![Mi repertorio](./readme_files/aplicacion.001.jpeg)
+![Mi repertorio](./readme_files/aplicacion.jpeg)
 
 ## Construido con 🛠️
 
