@@ -38,16 +38,12 @@ const consultar = async () => {
 
 const editar = async (datos) => {
   const consulta = {
-    text: `UPDATE repertorio SET 
-              cancion = $1, 
-              artista = $2, 
-              tono = $3 
-              WHERE artista = $2 RETURNING *;`,
+    text: `UPDATE repertorio SET cancion = $2, artista = $3, tono = $4 WHERE id = $1 RETURNING *;`,
     values: datos,
   };
   try {
     const result = await pool.query(consulta);
-    console.log(result.rows[0]);
+    //console.log(result.rows[0]);
     return result;
   } catch (error) {
     console.log("Codigo de error", error.code);

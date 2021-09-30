@@ -43,6 +43,7 @@ actualice ese registro de la tabla repertorio.
       req.on("data", (chunk) => {
         body += chunk;
       });
+
       req.on("end", async () => {
         const datos = Object.values(JSON.parse(body));
         const respuesta = await editar(datos);

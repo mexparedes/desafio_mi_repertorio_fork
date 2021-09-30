@@ -139,6 +139,7 @@
   function editarCancion(id) {
     axios
       .put(url, {
+        id: id,
         cancion: cancion.value,
         artista: artista.value,
         tono: tono.value,
