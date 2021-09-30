@@ -1,10 +1,10 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
-  user: "mario",
+  user: "postgres",
   host: "localhost",
   database: "repertorio",
-  password: "1234",
+  password: "admin",
   port: 5432,
   max: 20,
   idleTimeoutMillis: 5000,
@@ -19,11 +19,14 @@ const insertar = async (datos) => {
   try {
     const result = await pool.query(consulta);
     console.log("Datos insertados correctamente", result.rows[0]);
+    
     return result;
   } catch (error) {
     console.log("Codigo de error", error.code);
     return error;
   }
+
+  
 };
 
 const consultar = async () => {

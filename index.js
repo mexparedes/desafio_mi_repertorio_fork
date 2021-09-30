@@ -30,7 +30,7 @@ http
 
     if (req.url == "/canciones" && req.method === "GET") {
       const registros = await consultar();
-      //Se le agrega la propiedad rows porque el html no lo trae y el forEach de la función getData no lee el objeto
+      //res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify(registros.rows));
     }
 
@@ -62,4 +62,4 @@ actualice ese registro de la tabla repertorio.
       res.end(JSON.stringify(respuesta));
     }
   })
-  .listen(3000, console.log("SERVIDOR ON"));
+  .listen(3000, console.log("SERVIDOR ON EN PUERTO 3000"));
